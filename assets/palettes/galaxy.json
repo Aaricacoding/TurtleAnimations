@@ -1,0 +1,13 @@
+{
+  "_comment": "Deep space palette for galaxy.py and projection animations",
+  "background": "#000008",
+  "star_white": "#ffffff",
+  "star_blue": "#aac4ff",
+  "star_yellow": "#fff4a3",
+  "star_orange": "#ffb347",
+  "star_red": "#ff4500",
+  "nebula_teal": "#00ced1",
+  "nebula_pink": "#da70d6",
+  "nebula_blue": "#4169e1",
+  "dust": "#1a1a2e"
+}

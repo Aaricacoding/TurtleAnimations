@@ -1,0 +1,13 @@
+{
+  "_comment": "Smooth gradient palette for Mandelbrot / Julia set coloring",
+  "background": "#000000",
+  "depth_0": "#0d0221",
+  "depth_1": "#190b28",
+  "depth_2": "#341648",
+  "depth_3": "#6b2d6b",
+  "depth_4": "#ab4e68",
+  "depth_5": "#e88c7d",
+  "depth_6": "#f5c77e",
+  "depth_7": "#f9f871",
+  "escaped": "#ffffff"
+}

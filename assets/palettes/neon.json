@@ -1,0 +1,12 @@
+{
+  "_comment": "High-intensity neon palette for physics/neon.py and glow effects",
+  "background": "#000000",
+  "neon_pink": "#ff00ff",
+  "neon_cyan": "#00ffff",
+  "neon_green": "#39ff14",
+  "neon_yellow": "#ffff00",
+  "neon_orange": "#ff6600",
+  "neon_blue": "#0080ff",
+  "neon_purple": "#bf00ff",
+  "neon_red": "#ff0033"
+}

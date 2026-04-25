@@ -1,7 +1,5 @@
 <div align="center">
-
-  <img src="assets/turtle_header.svg" width="750"/>
-  
+  <img src="assets/turtle_header.svg" width="700"/>
 </div>
 
 ### `{ where mathematics becomes art }`

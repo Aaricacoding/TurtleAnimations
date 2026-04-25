@@ -1,8 +1,14 @@
 <div align="center">
-  <img src="assets/turtle_header.svg" width="700"/>
+  <img src="assets/previews/turtle_header.gif" width="750"/>
 </div>
 
-### `{ where mathematics becomes art }`
+<div align="center">
+  ✦ where mathematics becomes art ✦
+</div>
+
+<div align="center">
+◦ ─ ∿ ─ ◦ ─ ∿ ─ ◦
+</div>
 
 _Generative art & geometric animations : built entirely with Python's turtle library_
 
@@ -13,15 +19,6 @@ _Generative art & geometric animations : built entirely with Python's turtle lib
 [![Library](https://img.shields.io/badge/Library-turtle-FFA500?style=for-the-badge&labelColor=0d1117)](https://docs.python.org/3/library/turtle.html)
 [![Scripts](https://img.shields.io/badge/Scripts-20%2B%20%26%20Growing-FF6B9D?style=for-the-badge&labelColor=0d1117)](https://github.com/Aaricacoding/TurtleAnimations)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&labelColor=0d1117)](LICENSE)
-
-<br/>
-
-```
-  ╔══╗ ╔══╗ ╔══╗ ╔════╗ ╔══╗ ╔══╗    ╔══╗ ╔╗  ╔╗ ╔══╗ ╔╗╔╗  ╔══╗ ╔══╗ ╔══╗ ╔══╗
-  ╚╗╔╝ ║ ╔╝ ╚╗╔╝ ║ ╔══╝ ║ ╚═╣ ╔══╝   ╚╗╔╝ ║╚╗╔╝║ ║ ╔╝ ║╔╝║  ╚╗╔╝ ║╔╗║ ║╔╗║ ╚╗╔╝
-   ║║  ║ ╚╗  ║║  ║ ╚══╗ ║ ╔╗ ╣ ╚══╗   ║║  ║ ╚╝ ║ ║ ║  ║╚╗║   ║║  ║╚╝║ ║╚╝║  ║║
-   ╚╝  ╚══╝  ╚╝  ╚════╝ ╚═╝╚═╩════╝   ╚╝  ╚════╝ ╚═╝  ╚═╝╚   ╚╝  ╚══╝ ╚══╝  ╚╝
-```
 
 > _"The universe is written in the language of mathematics,_
 > _and its characters are triangles, circles, and geometric figures."_

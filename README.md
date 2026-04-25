@@ -1,10 +1,10 @@
 <div align="center">
 
-```
-▁ ▂ ▃ ▄ ▅ ▆ ▇ █ ▇ ▆ ▅ ▄ ▃ ▂ ▁
-      TURTLE ANIMATIONS
-▁ ▂ ▃ ▄ ▅ ▆ ▇ █ ▇ ▆ ▅ ▄ ▃ ▂ ▁
-```
+# ∿ TURTLE ∿ ANIMATIONS ∿
+
+## ∿ TURTLE ∿ ANIMATIONS ∿
+
+### ∿ TURTLE ∿ ANIMATIONS ∿
 
 </div>
 

@@ -4,7 +4,7 @@
 
 ### `{ where mathematics becomes art }`
 
-_Generative art & geometric animations — built entirely with Python's turtle library_
+_Generative art & geometric animations : built entirely with Python's turtle library_
 
 <br/>
 

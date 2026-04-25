@@ -1,6 +1,12 @@
 <div align="center">
 
-# 🐢 TURTLE ANIMATIONS
+```
+▁ ▂ ▃ ▄ ▅ ▆ ▇ █ ▇ ▆ ▅ ▄ ▃ ▂ ▁
+      TURTLE ANIMATIONS
+▁ ▂ ▃ ▄ ▅ ▆ ▇ █ ▇ ▆ ▅ ▄ ▃ ▂ ▁
+```
+
+</div>
 
 ### `{ where mathematics becomes art }`
 

@@ -191,16 +191,16 @@ python projections/camera.py
 
 <div align="center">
 
-|      Animation      | Core Formula                                            |
-| :-----------------: | :------------------------------------------------------ | --- | --- |
-| 💖 Parametric Heart | `x = 16sin³t` · `y = 13cost − 5cos2t − 2cos3t − cos4t`  |
-| ☀️ Sunburst Spiral  | Fermat's spiral `r = a√θ` · golden angle `φ = 137.508°` |
-|    🌑 Mandelbrot    | `z₍ₙ₊₁₎ = zₙ² + c`, `z₀=0` — iterate until `            | z   | >2` |
-|    🔵 Julia Set     | `z₍ₙ₊₁₎ = zₙ² + c`, fixed `c`, varying `z₀`             |
-|    〰️ Lissajous     | `x = A·sin(aτ+δ)` · `y = B·sin(bτ)`                     |
-|      🌌 Galaxy      | `F = Gm₁m₂/r²` · velocity-verlet integration            |
-|   📐 Vector Field   | `vx = sin(y·k + t)` · `vy = cos(x·k + t)`               |
-|     🧊 3D Cube      | Rotation matrices + perspective divide `f = FOV/depth`  |
+|      Animation      | Core Formula                                                   |
+| :-----------------: | :------------------------------------------------------------- |
+| 💖 Parametric Heart | `x = 16sin³t` · `y = 13cos(t) − 5cos(2t) − 2cos(3t) − cos(4t)` |
+| ☀️ Sunburst Spiral  | Fermat's spiral `r = a√θ` · golden angle `φ = 137.508°`        |
+|    🌑 Mandelbrot    | `zₙ₊₁ = zₙ² + c`, `z₀ = 0` — iterate until `\|z\| > 2`         |
+|    🔵 Julia Set     | `zₙ₊₁ = zₙ² + c`, fixed `c`, varying `z₀`                      |
+|    〰️ Lissajous     | `x = A·sin(aτ + δ)` · `y = B·sin(bτ)`                          |
+|      🌌 Galaxy      | `F = Gm₁m₂ / r²` · velocity-Verlet integration                 |
+|   📐 Vector Field   | `vx = sin(y·k + t)` · `vy = cos(x·k + t)`                      |
+|     🧊 3D Cube      | Rotation matrices + perspective divide `f = FOV / depth`       |
 
 </div>
 

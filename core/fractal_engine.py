@@ -1,23 +1,60 @@
 """
 core/fractal_engine.py
 ======================
-Recursive and iterative helpers for fractal animations.
+Math functions + L-System helpers for all fractal animations.
 
 Import pattern:
-    from core.fractal_engine import l_system, draw_l_system, sierpinski_triangle
+    from core.fractal_engine import mandelbrot, julia
+    from core.fractal_engine import l_system, draw_l_system
 """
 
 import turtle
-import math
+import sys
+import os
 
+# ── Make sure repo root is on path (needed when run via VS Code play button) ──
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Fractal math
+# ─────────────────────────────────────────────────────────────────────────────
+
+def mandelbrot(c: complex, max_iter: int) -> int:
+    """
+    Return the escape iteration count for point c in the Mandelbrot set.
+    z_(n+1) = z_n^2 + c,  starting from z=0.
+    Returns max_iter if the point never escapes |z| > 2.
+    """
+    z = 0j
+    for n in range(max_iter):
+        if abs(z) > 2:
+            return n
+        z = z * z + c
+    return max_iter
+
+
+def julia(z: complex, c: complex, max_iter: int) -> int:
+    """
+    Return the escape iteration count for point z with fixed seed c.
+    z_(n+1) = z_n^2 + c.
+    Returns max_iter if the point never escapes |z| > 2.
+    """
+    for n in range(max_iter):
+        if abs(z) > 2:
+            return n
+        z = z * z + c
+    return max_iter
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# L-System helpers
+# ─────────────────────────────────────────────────────────────────────────────
 
 def l_system(axiom: str, rules: dict, iterations: int) -> str:
-    """
-    Expand an L-System string.
-      axiom      : starting string  e.g. "F"
-      rules      : replacement dict e.g. {"F": "F+F-F-F+F"}
-      iterations : expansion steps
-    """
+    """Expand an L-System string for `iterations` steps."""
     result = axiom
     for _ in range(iterations):
         result = "".join(rules.get(ch, ch) for ch in result)
@@ -31,12 +68,8 @@ def draw_l_system(
     step: float,
 ) -> None:
     """
-    Draw an L-System string.
-      F / G  — forward
-      +      — left  by angle
-      -      — right by angle
-      [      — push state
-      ]      — pop  state
+    Draw an L-System string using turtle.
+      F/G — forward   + — left   - — right   [ — push   ] — pop
     """
     stack = []
     for cmd in instructions:

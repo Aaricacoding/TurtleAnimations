@@ -67,6 +67,11 @@ def run_script(path: str) -> None:
     sys.modules["animation"] = mod
     spec.loader.exec_module(mod)
 
+    # New-style animations expose a run() entry point; legacy scripts run at
+    # module level, so we only call run() when it actually exists.
+    if hasattr(mod, "run") and callable(mod.run):
+        mod.run()
+
 
 def print_menu() -> None:
     print(BANNER)

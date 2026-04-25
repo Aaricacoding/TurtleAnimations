@@ -1,7 +1,7 @@
 <div align="center">
 
-#  🐢TURTLE ANIMATIONS🐢 
-
+  <img src="assets/turtle_header.svg" width="750"/>
+  
 </div>
 
 ### `{ where mathematics becomes art }`

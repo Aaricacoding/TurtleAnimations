@@ -1,0 +1,357 @@
+<svg width="1000" height="250" viewBox="0 0 1000 250"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+
+  <!-- ─── FILTERS ─── -->
+  <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="glow2" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="10" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <filter id="softglow" x="-15%" y="-15%" width="130%" height="130%">
+    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <!-- ─── BACKGROUNDS ─── -->
+  <radialGradient id="bgGrad" cx="50%" cy="50%" r="65%">
+    <stop offset="0%"   stop-color="#1c0840"/>
+    <stop offset="60%"  stop-color="#110522"/>
+    <stop offset="100%" stop-color="#0d1117"/>
+  </radialGradient>
+
+  <!-- ─── TITLE GRADIENT ─── -->
+  <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%">
+      <animate attributeName="stop-color"
+               values="#FF6B9D;#FFD700;#4ECDC4;#A855F7;#FF6B9D"
+               dur="8s" repeatCount="indefinite"/>
+    </stop>
+    <stop offset="33%">
+      <animate attributeName="stop-color"
+               values="#FFD700;#4ECDC4;#A855F7;#FF6B9D;#FFD700"
+               dur="8s" repeatCount="indefinite"/>
+    </stop>
+    <stop offset="66%">
+      <animate attributeName="stop-color"
+               values="#4ECDC4;#A855F7;#FF6B9D;#FFD700;#4ECDC4"
+               dur="8s" repeatCount="indefinite"/>
+    </stop>
+    <stop offset="100%">
+      <animate attributeName="stop-color"
+               values="#A855F7;#FF6B9D;#FFD700;#4ECDC4;#A855F7"
+               dur="8s" repeatCount="indefinite"/>
+    </stop>
+  </linearGradient>
+
+  <!-- ─── WAVE GRADIENT ─── -->
+  <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%">
+      <animate attributeName="stop-color"
+               values="#A855F7;#FF6B9D;#FFD700;#4ECDC4;#A855F7"
+               dur="7s" repeatCount="indefinite"/>
+    </stop>
+    <stop offset="100%">
+      <animate attributeName="stop-color"
+               values="#4ECDC4;#A855F7;#FF6B9D;#FFD700;#4ECDC4"
+               dur="7s" repeatCount="indefinite"/>
+    </stop>
+  </linearGradient>
+
+  <!-- ─── SCAN SWEEP ─── -->
+  <linearGradient id="scanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="white" stop-opacity="0"/>
+    <stop offset="40%"  stop-color="white" stop-opacity="0.09"/>
+    <stop offset="60%"  stop-color="white" stop-opacity="0.14"/>
+    <stop offset="100%" stop-color="white" stop-opacity="0"/>
+  </linearGradient>
+
+  <!-- ─── ORBIT PATHS (closed ellipses via two arcs) ─── -->
+  <!-- orbit1: rx=390 ry=58 clockwise -->
+  <path id="orb1" d="M 110,125 A 390,58 0 1 1 890,125 A 390,58 0 1 1 110,125"/>
+  <!-- orbit2: rx=330 ry=40 counter-clockwise (opposite direction) -->
+  <path id="orb2" d="M 170,125 A 330,40 0 1 0 830,125 A 330,40 0 1 0 170,125"/>
+  <!-- orbit3: rx=430 ry=72 clockwise (outer) -->
+  <path id="orb3" d="M  70,125 A 430,72 0 1 1 930,125 A 430,72 0 1 1  70,125"/>
+
+</defs>
+
+<!-- ─── BACKGROUND ─── -->
+<rect width="1000" height="250" fill="url(#bgGrad)"/>
+
+<!-- ─── SUBTLE GRID ─── -->
+<g stroke="#7733BB" stroke-width="0.4" opacity="0.10">
+  <line x1="0" y1="50"  x2="1000" y2="50"/>
+  <line x1="0" y1="100" x2="1000" y2="100"/>
+  <line x1="0" y1="150" x2="1000" y2="150"/>
+  <line x1="0" y1="200" x2="1000" y2="200"/>
+  <line x1="200" y1="0" x2="200" y2="250"/>
+  <line x1="400" y1="0" x2="400" y2="250"/>
+  <line x1="600" y1="0" x2="600" y2="250"/>
+  <line x1="800" y1="0" x2="800" y2="250"/>
+</g>
+
+<!-- ─── TWINKLING STARS — top band ─── -->
+<circle cx="45"  cy="28" r="1.5" fill="white">
+  <animate attributeName="opacity" values="0.6;1;0.2;0.9;0.6" dur="3.1s" repeatCount="indefinite"/>
+</circle>
+<circle cx="148" cy="18" r="1.0" fill="#4ECDC4">
+  <animate attributeName="opacity" values="0.7;0.2;1;0.4;0.7" dur="4.2s" repeatCount="indefinite"/>
+</circle>
+<circle cx="275" cy="13" r="2.0" fill="white">
+  <animate attributeName="opacity" values="0.4;1;0.2;0.8;0.4" dur="2.8s" repeatCount="indefinite"/>
+</circle>
+<circle cx="390" cy="22" r="1.0" fill="#FFD700">
+  <animate attributeName="opacity" values="0.6;0.2;1;0.4;0.6" dur="5.1s" repeatCount="indefinite"/>
+</circle>
+<circle cx="500" cy="10" r="1.5" fill="#A855F7">
+  <animate attributeName="opacity" values="0.5;1;0.3;0.9;0.5" dur="3.6s" repeatCount="indefinite"/>
+</circle>
+<circle cx="612" cy="20" r="1.0" fill="white">
+  <animate attributeName="opacity" values="0.7;0.3;1;0.5;0.7" dur="3.7s" repeatCount="indefinite"/>
+</circle>
+<circle cx="727" cy="15" r="1.5" fill="#FF6B9D">
+  <animate attributeName="opacity" values="0.4;0.9;0.1;0.8;0.4" dur="4.6s" repeatCount="indefinite"/>
+</circle>
+<circle cx="845" cy="24" r="2.0" fill="white">
+  <animate attributeName="opacity" values="0.5;1;0.2;0.7;0.5" dur="3.3s" repeatCount="indefinite"/>
+</circle>
+<circle cx="956" cy="32" r="1.0" fill="#4ECDC4">
+  <animate attributeName="opacity" values="0.6;0.3;1;0.5;0.6" dur="2.9s" repeatCount="indefinite"/>
+</circle>
+
+<!-- STARS — bottom band -->
+<circle cx="35"  cy="215" r="1.5" fill="white">
+  <animate attributeName="opacity" values="0.5;1;0.2;0.7;0.5" dur="4.4s" repeatCount="indefinite"/>
+</circle>
+<circle cx="127" cy="228" r="1.0" fill="#4ECDC4">
+  <animate attributeName="opacity" values="0.6;0.2;1;0.4;0.6" dur="3.6s" repeatCount="indefinite"/>
+</circle>
+<circle cx="257" cy="236" r="2.0" fill="white">
+  <animate attributeName="opacity" values="0.4;0.9;0.1;0.8;0.4" dur="5.2s" repeatCount="indefinite"/>
+</circle>
+<circle cx="378" cy="239" r="1.0" fill="#FFD700">
+  <animate attributeName="opacity" values="0.5;1;0.3;0.6;0.5" dur="3.8s" repeatCount="indefinite"/>
+</circle>
+<circle cx="500" cy="242" r="1.5" fill="#FF6B9D">
+  <animate attributeName="opacity" values="0.4;0.8;0.2;1;0.4" dur="4.3s" repeatCount="indefinite"/>
+</circle>
+<circle cx="623" cy="237" r="1.0" fill="white">
+  <animate attributeName="opacity" values="0.6;0.2;1;0.5;0.6" dur="4.1s" repeatCount="indefinite"/>
+</circle>
+<circle cx="748" cy="231" r="1.5" fill="#A855F7">
+  <animate attributeName="opacity" values="0.5;0.9;0.2;0.7;0.5" dur="2.7s" repeatCount="indefinite"/>
+</circle>
+<circle cx="873" cy="222" r="2.0" fill="white">
+  <animate attributeName="opacity" values="0.4;1;0.2;0.8;0.4" dur="4.9s" repeatCount="indefinite"/>
+</circle>
+<circle cx="968" cy="208" r="1.0" fill="#FFD700">
+  <animate attributeName="opacity" values="0.6;0.3;0.9;0.4;0.6" dur="3.5s" repeatCount="indefinite"/>
+</circle>
+
+<!-- STARS — side slivers -->
+<circle cx="14"  cy="82"  r="1.0" fill="white">
+  <animate attributeName="opacity" values="0.5;1;0.2;0.6;0.5" dur="5.3s" repeatCount="indefinite"/>
+</circle>
+<circle cx="18"  cy="168" r="1.5" fill="#4ECDC4">
+  <animate attributeName="opacity" values="0.4;0.9;0.1;0.7;0.4" dur="3.9s" repeatCount="indefinite"/>
+</circle>
+<circle cx="986" cy="75"  r="1.0" fill="white">
+  <animate attributeName="opacity" values="0.5;0.2;1;0.4;0.5" dur="4.7s" repeatCount="indefinite"/>
+</circle>
+<circle cx="982" cy="178" r="1.5" fill="#FFD700">
+  <animate attributeName="opacity" values="0.4;1;0.2;0.8;0.4" dur="3.2s" repeatCount="indefinite"/>
+</circle>
+
+<!-- ─── ORBITAL RING DECORATIONS ─── -->
+<ellipse cx="500" cy="125" rx="390" ry="58"
+         stroke="#A855F7" stroke-width="0.8" fill="none"
+         opacity="0.18" stroke-dasharray="6 12">
+  <animateTransform attributeName="transform" type="rotate"
+                    from="0 500 125" to="360 500 125"
+                    dur="45s" repeatCount="indefinite"/>
+</ellipse>
+<ellipse cx="500" cy="125" rx="330" ry="40"
+         stroke="#4ECDC4" stroke-width="0.8" fill="none"
+         opacity="0.15" stroke-dasharray="4 14">
+  <animateTransform attributeName="transform" type="rotate"
+                    from="360 500 125" to="0 500 125"
+                    dur="38s" repeatCount="indefinite"/>
+</ellipse>
+<ellipse cx="500" cy="125" rx="430" ry="72"
+         stroke="#FF6B9D" stroke-width="0.6" fill="none"
+         opacity="0.10" stroke-dasharray="3 18">
+  <animateTransform attributeName="transform" type="rotate"
+                    from="0 500 125" to="360 500 125"
+                    dur="60s" repeatCount="indefinite"/>
+</ellipse>
+
+<!-- ─── ORBITING PARTICLES ─── -->
+<!-- Gold dot on orbit1 (clockwise) -->
+<circle r="6" fill="#FFD700" filter="url(#glow)">
+  <animate attributeName="r" values="5;8;5" dur="2.4s" repeatCount="indefinite"/>
+  <animateMotion dur="13s" repeatCount="indefinite">
+    <mpath xlink:href="#orb1"/>
+  </animateMotion>
+</circle>
+<!-- Purple dot on orbit1 offset 180° -->
+<circle r="4" fill="#A855F7" filter="url(#glow)">
+  <animateMotion dur="13s" begin="-6.5s" repeatCount="indefinite">
+    <mpath xlink:href="#orb1"/>
+  </animateMotion>
+</circle>
+
+<!-- Cyan dot on orbit2 (counter-clockwise) -->
+<circle r="5" fill="#4ECDC4" filter="url(#glow)">
+  <animateMotion dur="19s" repeatCount="indefinite">
+    <mpath xlink:href="#orb2"/>
+  </animateMotion>
+</circle>
+<!-- Pink dot on orbit2 offset 120° -->
+<circle r="3" fill="#FF6B9D" filter="url(#glow)">
+  <animateMotion dur="19s" begin="-6.3s" repeatCount="indefinite">
+    <mpath xlink:href="#orb2"/>
+  </animateMotion>
+</circle>
+
+<!-- White dot on outer orbit3 -->
+<circle r="3" fill="white" opacity="0.7" filter="url(#softglow)">
+  <animateMotion dur="28s" repeatCount="indefinite">
+    <mpath xlink:href="#orb3"/>
+  </animateMotion>
+</circle>
+
+<!-- ─── SCANNING LIGHT SWEEP ─── -->
+<rect x="-200" y="0" width="180" height="250" fill="url(#scanGrad)">
+  <animate attributeName="x" from="-200" to="1080"
+           dur="6s" repeatCount="indefinite"/>
+</rect>
+
+<!-- ─── TOP WAVE ─── -->
+<path d="M0,38 Q250,14 500,38 T1000,38"
+      stroke="url(#waveGrad)" stroke-width="1.6" fill="none"
+      opacity="0.55" filter="url(#softglow)">
+  <animate attributeName="d"
+           values="M0,38 Q250,14 500,38 T1000,38;
+                   M0,38 Q250,62 500,38 T1000,38;
+                   M0,38 Q250,14 500,38 T1000,38"
+           dur="6s" repeatCount="indefinite"/>
+</path>
+
+<!-- ─── BOTTOM WAVES ─── -->
+<path d="M0,212 Q250,188 500,212 T1000,212"
+      stroke="url(#waveGrad)" stroke-width="2.2" fill="none"
+      opacity="0.65" filter="url(#glow)">
+  <animate attributeName="d"
+           values="M0,212 Q250,188 500,212 T1000,212;
+                   M0,212 Q250,236 500,212 T1000,212;
+                   M0,212 Q250,188 500,212 T1000,212"
+           dur="6s" repeatCount="indefinite"/>
+</path>
+<path d="M0,226 Q250,248 500,226 T1000,226"
+      stroke="url(#waveGrad)" stroke-width="1.4" fill="none" opacity="0.4">
+  <animate attributeName="d"
+           values="M0,226 Q250,248 500,226 T1000,226;
+                   M0,226 Q250,204 500,226 T1000,226;
+                   M0,226 Q250,248 500,226 T1000,226"
+           dur="7.5s" repeatCount="indefinite"/>
+</path>
+
+<!-- ─── FLOATING MATH SYMBOLS ─── -->
+<text x="70" y="94" text-anchor="middle"
+      font-size="28" font-family="Georgia, serif"
+      fill="#A855F7" filter="url(#glow)">π
+  <animate attributeName="opacity" values="0.45;0.9;0.45" dur="3.4s" repeatCount="indefinite"/>
+  <animate attributeName="y"       values="94;87;94"       dur="3.4s" repeatCount="indefinite"/>
+</text>
+
+<text x="930" y="94" text-anchor="middle"
+      font-size="28" font-family="Georgia, serif"
+      fill="#4ECDC4" filter="url(#glow)">∞
+  <animate attributeName="opacity" values="0.45;0.9;0.45" dur="4.1s" begin="-1.5s" repeatCount="indefinite"/>
+  <animate attributeName="y"       values="94;87;94"       dur="4.1s" begin="-1.5s" repeatCount="indefinite"/>
+</text>
+
+<text x="70" y="168" text-anchor="middle"
+      font-size="24" font-family="Georgia, serif"
+      fill="#FF6B9D" filter="url(#glow)">φ
+  <animate attributeName="opacity" values="0.45;0.9;0.45" dur="5.2s" begin="-2s" repeatCount="indefinite"/>
+  <animate attributeName="y"       values="168;161;168"    dur="5.2s" begin="-2s" repeatCount="indefinite"/>
+</text>
+
+<text x="930" y="168" text-anchor="middle"
+      font-size="24" font-family="Georgia, serif"
+      fill="#FFD700" filter="url(#glow)">Σ
+  <animate attributeName="opacity" values="0.45;0.9;0.45" dur="3.8s" begin="-0.5s" repeatCount="indefinite"/>
+  <animate attributeName="y"       values="168;161;168"    dur="3.8s" begin="-0.5s" repeatCount="indefinite"/>
+</text>
+
+<!-- Smaller formula snippets -->
+<text x="162" y="52" text-anchor="middle"
+      font-size="14" font-family="'Courier New', monospace"
+      fill="#4ECDC4" opacity="0.0">z²+c
+  <animate attributeName="opacity" values="0;0.5;0.7;0.5;0" dur="8s"  repeatCount="indefinite"/>
+</text>
+<text x="838" y="52" text-anchor="middle"
+      font-size="14" font-family="'Courier New', monospace"
+      fill="#FF6B9D" opacity="0.0">r=a√θ
+  <animate attributeName="opacity" values="0;0.5;0.7;0.5;0" dur="9s" begin="-3s" repeatCount="indefinite"/>
+</text>
+<text x="162" y="208" text-anchor="middle"
+      font-size="13" font-family="'Courier New', monospace"
+      fill="#FFD700" opacity="0.0">F=Gm₁m₂/r²
+  <animate attributeName="opacity" values="0;0.5;0.7;0.5;0" dur="10s" begin="-5s" repeatCount="indefinite"/>
+</text>
+<text x="838" y="208" text-anchor="middle"
+      font-size="13" font-family="'Courier New', monospace"
+      fill="#A855F7" opacity="0.0">x=16sin³t
+  <animate attributeName="opacity" values="0;0.5;0.7;0.5;0" dur="7s" begin="-2s" repeatCount="indefinite"/>
+</text>
+
+<!-- ─── MAIN TITLE ─── -->
+<text x="500" y="118" text-anchor="middle"
+      font-size="54" font-weight="bold" letter-spacing="3"
+      font-family="'Courier New', Courier, monospace"
+      fill="url(#titleGrad)" filter="url(#glow2)">
+  TURTLE ANIMATIONS
+  <animate attributeName="opacity" values="0.92;1;0.92" dur="5s" repeatCount="indefinite"/>
+</text>
+
+<!-- ─── SUBTITLE ─── -->
+<text x="500" y="157" text-anchor="middle"
+      font-size="13" letter-spacing="7"
+      font-family="'Courier New', Courier, monospace">
+  ✦ where mathematics becomes art ✦
+  <animate attributeName="fill"
+           values="#777777;#FFD700;#A855F7;#4ECDC4;#FF6B9D;#777777"
+           dur="12s" repeatCount="indefinite"/>
+</text>
+
+<!-- ─── BOTTOM SEPARATOR DOTS ─── -->
+<g filter="url(#softglow)">
+  <circle cx="460" cy="178" r="2" fill="#A855F7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="480" cy="178" r="2" fill="#FF6B9D">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="-0.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="178" r="2" fill="#FFD700">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="-0.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="520" cy="178" r="2" fill="#4ECDC4">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="-1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="540" cy="178" r="2" fill="#A855F7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="-1.6s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+</svg>

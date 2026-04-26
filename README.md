@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/previews/turtle_header.gif" width="750"/>
+  <img src="assets/previews/turtle_header.svg" width="750"/>
 </div>
 
 <div align="center">

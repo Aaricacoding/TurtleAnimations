@@ -7,7 +7,7 @@ This folder stores all static and generated files for the TurtleAnimations proje
 | Subfolder   | What goes here                                             |
 | ----------- | ---------------------------------------------------------- |
 | `previews/` | Screenshot PNGs of each animation (used in README / docs)  |
-| `exports/`  | Saved canvas exports — PostScript (.eps) or converted PNGs |
+| `exports/`  | Saved canvas exports - PostScript (.eps) or converted PNGs |
 | `fonts/`    | Any custom fonts used in turtle text rendering             |
 | `palettes/` | JSON color palette files shared across animations          |
 

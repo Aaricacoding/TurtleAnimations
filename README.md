@@ -63,12 +63,26 @@ TurtleAnimations/
 │   ├── lissajous_controller.py        ← Real-time Lissajous figures
 │   └── mouse_painter.py              ← Draw with your cursor
 │
-├── 📦  legacy/                        ← Original hand-crafted animations
+├── 📦  legacy/
 │   ├── parametric_heart.py
 │   ├── arc_weave.py
+│   ├── aurora_dots.py
+│   ├── colorburst_sunflower.py
+│   ├── crazy_dancing_arcs.py
+│   ├── crescent_cardioid.py
 │   ├── geometricRainbow_wheel.py
+│   ├── golden_spirograph.py
+│   ├── orbital_flower_pattern.py
+│   ├── oscillator.py
+│   ├── oscillator2.py
+│   ├── star_tetrahedron.py
+│   ├── starburst_orbit.py
 │   └── sunburst_spiral.py
-│
+|
+├── 🌀  Torus/
+│   ├── lotusOf_life.py
+│   └── torus_vortex.py
+|
 ├── 🌊  physics/
 │   ├── engine.py                      ← Simulation loop
 │   ├── forces.py                      ← Gravity + wind
@@ -99,12 +113,35 @@ TurtleAnimations/
 
 <div align="center">
 
-|        Animation        |                File                | Description                                                 | Complexity |
-| :---------------------: | :--------------------------------: | :---------------------------------------------------------- | :--------: |
-| 💖 **Parametric Heart** |    `legacy/parametric_heart.py`    | Heart from `x=16sin³t`, `y=13cost−5cos2t−2cos3t−cos4t`      |    ⭐⭐    |
-|    🌀 **Arc Weave**     |       `legacy/arc_weave.py`        | Interlocking circular arcs in layered woven patterns        |   ⭐⭐⭐   |
-|  🌈 **Rainbow Wheel**   | `legacy/geometricRainbow_wheel.py` | Rotating gear painted across the full colour spectrum       |   ⭐⭐⭐   |
-| ☀️ **Sunburst Spiral**  |    `legacy/sunburst_spiral.py`     | Radial spiral using Fermat's spiral + golden angle φ=137.5° |  ⭐⭐⭐⭐  |
+|        Animation        |            File             | Description                               | Complexity |
+| :---------------------: | :-------------------------: | :---------------------------------------- | :--------: |
+|   💖 Parametric Heart   |    `parametric_heart.py`    | Heart from parametric equations           |    ⭐⭐    |
+|      🌀 Arc Weave       |       `arc_weave.py`        | Interlocking circular arc patterns        |   ⭐⭐⭐   |
+|     🌌 Aurora Dots      |      `aurora_dots.py`       | Flowing aurora-style particle waves       |   ⭐⭐⭐   |
+| 🌻 Colorburst Sunflower |  `colorburst_sunflower.py`  | Golden angle spiral with vibrant coloring |  ⭐⭐⭐⭐  |
+|  💃 Crazy Dancing Arcs  |   `crazy_dancing_arcs.py`   | Dynamic rotating arc animations           |   ⭐⭐⭐   |
+|  🌙 Crescent Cardioid   |   `crescent_cardioid.py`    | Cardioid-based crescent geometry          |   ⭐⭐⭐   |
+|    🌈 Rainbow Wheel     | `geometricRainbow_wheel.py` | Full-spectrum rotating color wheel        |   ⭐⭐⭐   |
+|  🧿 Golden Spirograph   |   `golden_spirograph.py`    | Harmonic circular interference patterns   |  ⭐⭐⭐⭐  |
+|    🌸 Orbital Flower    | `orbital_flower_pattern.py` | Rotating petal interference pattern       |   ⭐⭐⭐   |
+|      〰️ Oscillator      |       `oscillator.py`       | Simple harmonic motion visualization      |    ⭐⭐    |
+|    〰️ Oscillator II     |      `oscillator2.py`       | Multi-frequency oscillation patterns      |   ⭐⭐⭐   |
+|   ✡️ Star Tetrahedron   |    `star_tetrahedron.py`    | Sacred geometry projection                |  ⭐⭐⭐⭐  |
+|   ✨ Starburst Orbit    |    `starburst_orbit.py`     | Radial orbiting burst animation           |   ⭐⭐⭐   |
+|   ☀️ Sunburst Spiral    |    `sunburst_spiral.py`     | Fermat spiral using golden angle          |  ⭐⭐⭐⭐  |
+
+</div>
+
+---
+
+## 🌀 Torus Explorations
+
+<div align="center">
+
+| Animation        | File              | Description                                                  |
+| ---------------- | ----------------- | ------------------------------------------------------------ |
+| 🌸 Lotus of Life | `lotusOf_life.py` | Layered circular symmetry forming lotus-like sacred geometry |
+| 🌪️ Torus Vortex  | `torus_vortex.py` | Rotating toroidal flow illusion using layered arcs           |
 
 </div>
 
@@ -209,7 +246,7 @@ python projections/camera.py
 
 [![Status](https://img.shields.io/badge/🟢%20ACTIVELY%20DEVELOPED-Ongoing-success?style=for-the-badge&labelColor=0d1117)](https://github.com/Aaricacoding/TurtleAnimations)
 
-**20+ scripts and growing.** New animations added regularly — watch the repo to get notified.
+**30+ scripts and growing.** New animations added regularly — watch the repo to get notified.
 
 </div>
 
